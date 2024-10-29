@@ -1,0 +1,662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Mi pagina personal</title>
+<link rel="icon" href="../Icono web.jpg">
+</head>
+<style type="text/css">
+	/* Parte del menú */
+    *{ 
+        padding: 0px;
+        margin: 0px;
+    }
+    #header{
+        position: fixed;
+        top: 0;
+        background-color: #000000;
+        margin: auto;
+        z-index: 1000;
+        width: 100%;
+        font-family: "Times New Roman", Times, serif;
+    }
+    ul, ol{
+        list-style: none;
+    }
+    .nav li a{
+        background-color: #000000;
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: 5px 10px;
+        display: block;
+    }
+    .nav li a:hover{
+        background-color: #434343;
+    }
+    .nav > li {
+        float: left;
+        width:11.11%;
+    }
+    .nav li ul{
+        display: none;
+        position: absolute;
+        max-width: 140px;
+    }
+    .nav li:hover > ul{
+        display: block;
+    }
+    .nav li ul li{
+        position: relative;
+    }
+    .nav li ul li ul{
+        right: -140px;
+        top: 0px;
+    }
+    body{
+        margin-top:50px;
+    }
+
+    /* Animación de desplazamiento suave */
+    html {
+        scroll-behavior: smooth; /* Desplazamiento suave */
+    }
+	/* Aqui va el contender de la imagen */
+	.contenedor {
+		display: flex;
+		align-items: center; 
+		justify-content: center; 
+		gap: 20px; 
+		}
+	/* Aqui va para poner mi foto de perfil redonodo */
+	.imagen-redonda {
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #333; 
+        }
+	/* Aqui va la animacion de las imagenes */
+/* Estilo del contenedor de las imágenes */
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 430px; /* Ajusta la altura */
+}
+
+/* Estilo de las imágenes */
+.contenedor-imagenes img {
+    width: 100px; /* Tamaño inicial de las imágenes */
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+
+/* Efecto al hacer hover (agrandar las imágenes) */
+.contenedor-imagenes img:hover {
+    cursor: crosshair;
+    width: 300px; /* Tamaño al hacer hover */
+    opacity: 1;
+    filter: contrast(120%);
+}
+/*Efecto de zoom en imagenes */
+.imagen-zoom {
+    width: 200px; /* Tamaño inicial */
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+
+.imagen-zoom:hover {
+    cursor: crosshair;
+    width: 300px; /* Tamaño al hacer hover */
+    opacity: 1;
+    filter: contrast(120%);
+}
+.Estilo1 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+/* Aqui se mostraran el botones de links */
+ .btn-outline-light {
+            color: #ffffff;
+            background-color: #000000; /* Fondo negro */
+            border: 2px solid #ffffff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-outline-light:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+	/*Aqui va el zoom de la imagenes */
+	 .container {
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .container:hover img {
+            transform: scale(1.5); /* Aquí se aplica el zoom */
+        }
+</style>
+<body style="background-color:#99FFCC" >
+    <div id="header">
+        <ul class="nav">
+            <li><a href="#Inicio">Inicio</a></li>
+            <li><a href="#Gustos">Gustos</a>
+                <ul>
+                    <li><a href="#Musicales">Musicales</a></li>
+                    <li><a href="#Peliculasyseries">Películas y series</a></li>
+                    <li><a href="#Deportes">Deportes</a></li>
+                </ul>
+            </li>
+            <li><a href="#Estudios">Estudios</a></li>
+            <li><a href="#Amigos">Amigos</a>
+                <ul>
+                    <li><a href="#Universidad">Universidad</a></li>
+                    <li><a href="#Bachiller">Bachiller</a></li>
+                </ul>
+            </li>
+            <li><a href="#Familia">Familia</a></li>
+            <li><a href="#Trabajo">Trabajo</a></li>
+            <li><a href="#Horario">Horario</a></li>
+            <li><a href="#Comentarios">Comentarios</a></li>
+            <li><a href="Proyecto Final.html">Salir</a></li>
+        </ul>
+    </div>
+		<img src="../bienvenido.gif" alt="Descripcion de la imagen" width="100%" height="auto"/>
+
+		<section id="Inicio">
+		<h2 align="center">&nbsp;</h2>
+		<h2 align="center">Este soy yo </h2>
+		<div class="contenedor">
+			<img src="../Personal/yo 2.0.jpg" alt="Imagen redonda" class="imagen-redonda"/>
+			<p align="justify">Hola, mi nombre es Oscar Uriel Fernandez Onofre, Sigo estudiando en el Instituto Tecnologico de Puebla, esta es mi 4 pagina web pero es la primera que hago a mi persona a si que disfrutenlo y puedan opinar bien y si esta mejor de lo que esperaba mejorar dia a dia y ser mejor en lo que hago</p>
+			<p align="justify">&iexcl;Bienvenido a mi p&aacute;gina personal!<br />
+			  Hola y gracias por visitar mi espacio en la web. Aqu&iacute; podr&aacute;s conocer m&aacute;s sobre m&iacute;, mis proyectos, y mis intereses. Mi objetivo es compartir mis experiencias, conocimientos y algunas de las ideas que me apasionan. Explora a tu ritmo, y si&eacute;ntete libre de contactarme si tienes alguna pregunta o simplemente quieres conectar. &iexcl;Espero que disfrutes tu visita!<br />
+			</p>
+			<div>
+			<h2 align="left"> Mis redes sociales pa contactarme o seguirme simplemente </h2>
+	        <a href="https://www.facebook.com/oscaruriel.fernandezonofre.3"><img src="../Iconos/i.facebook.jpg" width="50" height="50" /></a>
+			<a href="https://www.instagram.com/oscar_uriel203/"><img src="../Iconos/i.instagram.jpg" width="50" height="50"/></a>
+			<a href="https://mx.pinterest.com/fernandezonofreo/_profile/"><img src="../Iconos/i.pinterest.jpg" width="50" height="50"/></a>
+			<a href="https://www.tiktok.com/@urielfern?_t=8qnpy3fxpxO&_r=1"><img src="../Iconos/i.tiktok.jpg" width="50" height="50"/></a>
+			<a href="https://wa.me/qr/27L3QVEKLVP6J1 "><img src="../Iconos/i.whatsapp.jpg" width="50" height="50"/></a>
+		</div>
+				</section>
+<section id="Gustos">
+  <p>&nbsp;</p>
+  <h2 align="center">&nbsp;</h2>
+  <h2 align="center">&nbsp;</h2>
+  <h2 align="center">&nbsp;</h2>
+  <h2 align="center">&nbsp;</h2>
+  <h2 align="center">Gustos </h2>
+  <p> Aqui se mostraran mis gustos tanto en la musica como generos y canciones favoritas, se mostraras peliculas y series en donde me tome la libertad de anotar mis anecdotas al observarlas, los deportes los cuales eh practicado en mi vida y mis pasatiempos favoritos.</p>
+		<section>
+    <div class="contenedor-imagenes">
+        <img src="../Gustos/Peliculas y series/Michi.jpg" alt="Imagen Película" />
+        <img src="../Gustos/Musica/Gato musica.jpg" alt="Imagen Música" />
+        <img src="../Gustos/Deportes/dog deportivo.jpg" alt="Imagen Deportes" />    </div>
+</section>
+  		<section id="Musicales">
+			<h2 align="center">&nbsp; </h2>
+			<h2 align="center">&nbsp;</h2>
+			<h2 align="center">Musicales </h2>
+			<p>Aqui se mostraran mis artistas favoritos tanto porque me gusta el cantante o banda y aparte mis canciones favoritas de esos artistas</p>
+		<table width="100%" border="0">
+  <caption>
+    <em><strong>Estos son los artitstas que mas me gustan    </strong></em>
+  </caption>
+  <tr>
+    <th scope="col">			 <h1 align="center"> Carin leon </h1> 
+				<div class="contenedor-imagenes">
+					<img src="../Gustos/Musica/Carin leon 4.jpg" alt="Imagen artisia" />
+					<img src="../Gustos/Musica/Carin leon 3.jpg" alt="Imagen artisia" />
+					<img src="../Gustos/Musica/Carin leon 2.jpg" alt="Imagen artista" />				</div>
+				<button type="button" class="btn-outline-light" onclick="window.location.href='https://open.spotify.com/playlist/37i9dQZF1DZ06evO3B9t7y?si=XzOcOIN6SnaM8lUDuhivWg'">
+        Presiona aquí para escuchar su playlist personal :3    </button>		</th>
+    <th scope="col">&nbsp;</th>
+    <th scope="col">
+	<h1 align="center"> Christian nodal </h1>
+				<div class="contenedor-imagenes">
+					<img src="../Gustos/Musica/christian nodal.jpg" alt="Imagen artista 2" />
+					<img src="../Gustos/Musica/Christian nodal 2.jpg" alt="Imagen artista 2" />
+					<img src="../Gustos/Musica/Christian nodal 3.jpg" alt="Imagen artista 2" />
+					<img src="../Gustos/Musica/christian nodal 4.jpg" alt="Imagen artista 2" />				</div>
+				<button type="button" class="btn-outline-light" onclick="window.location.href='https://open.spotify.com/playlist/37i9dQZF1DX84rAVfgMv7C?si=ayN1CvkOTU-2TNmx9Se3Sg'">
+        Presiona aquí para escuchar su playlist personal :3    </button>	</th>
+  </tr>
+  <tr>
+    <td>
+	<h1 align="center"> Eden Muñoz </h1>
+				<div class="contenedor-imagenes">
+					<img src="../Gustos/Musica/Eden muñoz.jpg" alt="Imagen Artista 3"/>
+					<img src="../Gustos/Musica/Ene muñoz 2.jpg" alt="Imagen Artista 3"/>
+					<img src="../Gustos/Musica/Edenmuñoz 3.jpg" align="Imagen Artista 3" />
+					<img src="../Gustos/Musica/Eden Muñoz 4.jpg" align="Imagen Artista 3" />				</div>
+				<center>
+				<button type="button" aling="center" class="btn-outline-light" onclick="window.location.href='https://open.spotify.com/playlist/37i9dQZF1DZ06evO0GToIh?si=kNu5B9xNT-6SX3C91LDS0Q'">
+        Presiona aquí para escuchar su playlist personal :3    </button>
+	</center>	</td>
+    <td></td>
+    <td>
+	<h1 align="center"> Grupo frontera </h1>
+				<div class="contenedor-imagenes">
+					<img src="../Gustos/Musica/GF.jpg" alt="Imagen Artista 4"/>
+					<img src="../Gustos/Musica/GF2.jpg" alt="Imagen Artista 4"/>
+					<img src="../Gustos/Musica/GF3.jpg" align="Imagen Artista 4" />
+					<img src="../Gustos/Musica/GF4.jpg" align="Imagen Artista 4" />				</div>
+				<center>
+				<button type="button" aling="center" class="btn-outline-light" onclick="window.location.href='https://open.spotify.com/playlist/37i9dQZF1DZ06evO473sfm?si=67153f8f92fb49c7'">
+        Presiona aquí para escuchar su playlist personal :3    </button>
+	</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+	<h1> Estos son algunos de los cuales son para mi los mas importantes tambien escucho varios generos pero mi fuerte son las grupaciones o solistas del regional mexicano </h1>
+	<p> Tambien actualmente experimento y eh escuchado algunos boleros lo cual cree una playlist de puros boleros los cuales agradeceria que scucharan y comenten aca que les parecio esta playlist creada por mi </p>
+	<center><img src="../Gustos/Musica/boleros.png" width="350" /></center>
+	<button type="button" aling="center" class="btn-outline-light" onclick="window.location.href='https://open.spotify.com/playlist/6dIS454fvvczkI0Axk8GUq?si=cee426b9bb534860'">
+        Presiona aquí para escuchar su playlist personal :3    </button>
+	</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+</table>
+		</section>
+		<section id="Peliculasyseries">
+		  <h2>&nbsp; </h2>
+		  <h2>&nbsp;</h2>
+		  <h2 align="center">Peliculas y series </h2>
+		  <p>Aparte de vivir la musica a diaria eh visto peliculas, series y programas de television en donde eh estado horas sentado y no me aburro 			estos son algunas peliculas y series las cuales no paro de ver aunque sean muy infantiles o muy repetitivas jamas me aburro de verlos:</p>
+		  <p>&nbsp;</p>
+		  <table width="100%" border="0">
+  <tr>
+    <th scope="col">Peliculas</th>
+    <th scope="col">Series</th>
+  </tr>
+  <tr>
+    <td><center><h1> Five Night's At Freddy's </h1></center>
+	<p> Lo que pasa con esta pelicula es que es basada en un videojuego el cual </p>
+	<p> me acuerdo que cuando salio el videojuego, no lo queria jugar </p>
+	<p> es que salio el juego cuando estaba en primaria lo cual era un niño miedoso </p>
+	<p> acutualmente ya no me da tanto miedo ese tipo de cosas pero cuando me entere que </p>
+	<p> estaba en produccion una pelicula de ese vieojuego dije <b> vamos a recordar mi ni&Ntilde;ez </b></p>
+	<p> y actualmente es mi pelicula fav cuando su estreno fue hace un año </p>
+	<center><img src="../Gustos/Peliculas y series/FNAF.jpg" height="250" /></center>
+	</td>
+    <td><center><h1> Arcane </h1></center>
+	<p> Actualmente esta de moda crear producciones cinematograficas de videojuegos </p>
+	<p> y arcane no es la excepcion en donde esta inspirado en el famosos juego </p>
+	<p> League Of Legends lo cual nunca lo eh jugado solo eh visto la serie y me encanto </p>
+	<p> su historia, sus protagonistas y sobre todo la ambientacion </p>
+	<center><img src="../Gustos/Peliculas y series/Arcane.jpg" height="250" /></center>
+	</td>
+  </tr>
+  <tr>
+    <td><h1><center> Spider-Man 2 </center></h1>
+	<p> Esta pelicula la veo porque cuando se estreno en cines tenia 1 año por lo cual no tenia mucha memoria</p>
+	<p> pero la recuerdo porque todos los dias en mi infancia la veia en un disco pirata que compramos </p>
+	<p> o mas bien me regalaron de cumpleaños por lo cual a sido el mejor regalo que eh recibido </p>
+	<center><img src="../Gustos/Peliculas y series/spiderman.jpg" height="250" /></center>
+	</td>
+    <td><h1><center> The Last Of Us </center></h1>
+	<P> Otra filmacion de un videojuego pero este es un videojuego </P>
+	<p> diria yo que esta en un punto de razon ya que el videojuego es de zombies pero </p>
+	<p> estos zombis son generados no por un viruz o infeccion si no pon un hongo real </p>
+	<p> llamado Cordyceps que en la vida real solo ataca a animales pequeños </p>
+	<p> me llamo la atencion en el juego el como adaptaron ese hongo si una persona llegara a infectarse </p>
+	<p> diria yo que en la serie lo supieron adaptar mejor de lo que esperaba </p>
+	<center><img src="../Gustos/Peliculas y series/The last of us.jpg" height="250" /></center>
+	</td>
+  </tr>
+  <tr>
+    <td><h1><center> La trilogia de Volver al futuro</center> </h1>
+	<p> Estas peliculas son recomendadas por mi papá pero tiene un buen gusto </p>
+	<p> son de las peliculas palomeras las cuales son interesantes el como son los viajes en el tiempo </p>
+	<p> eleji las tres porque para mi esto es como ver un maraton sin aburrirme y buenas anecdotas viendo las peliculas </p>
+	<div class="contenedor-imagenes">
+					<img src="../Gustos/Peliculas y series/vaf 1.jpg" alt="VAF"/ height="250">
+					<img src="../Gustos/Peliculas y series/vaf2.jpg" alt="VAF" height="250"/>
+					<img src="../Gustos/Peliculas y series/vaf3.jpg" align="VAF" height="250"/></div>
+	</td>
+    <td><h1 align="center">Cobra kai </h1>
+	  <p> Esta serie es recocmendada por mi hermano el cual solo eso tiene de bueno xd </p>
+	<p> no pero encerio esta serie es continuacion de una de las mejores peliculas de karate </p>
+	<p> asi es hablo de karate kid el cual es la continuacion de los personajes </p>
+	<p> me llamo la atencion el cual supieron continuar bien la historia sin tener que modificar la original </p>
+	<center><img src="../Gustos/Peliculas y series/cobra kai.jpg" height="250" /></center>
+	</td>
+  </tr>
+</table>
+
+		</section>
+		<section id="Deportes">
+		<h2>&nbsp; </h2>
+		<h2>&nbsp;</h2>
+		<h2 align="center">Deportes </h2>
+		<p>Soy a veces de esas personas que prefiere estar sentado o acostado viendo la television todo el dia pero tenemos que pracicar un deporte tanto para beneficio en salud, mental y distraerse por un momento de esta vida</p>
+			<P> Estos son los deportes que eh practicado en mis 21 años de vida
+		  <li> Futbol </li>
+		  <center><h3> Equipo favorito en liga mexicana </h3></center>
+		  <center><img src="../Gustos/Deportes/Puebla.jpg" /><center>
+		  <p> Este qeuipo estoy empezando a ser fan ya que actualmente la liga mx esta sufriendo por casos de corrupcion lo cual </p>
+		  <p> mata la pasion por el deporte asi que siento yo el unico que se esfuerza por obtener ese titulo es el club puebla </p>
+		  <center><h3> Equipo favorito en liga europea </h3></center>
+		  <center><img src="../Gustos/Deportes/barcelona.jpg" /></center>
+		  <p> Apesar de que antes sufria de que no se levantaba de las bajas que tenia es el equipo que actualmente esta logrando ganar y golear a </p>
+		  <p> equipos que se superan por mucho en habilidades y creo yo eh sido fiel </p>
+		  <p> al barca desde hace tiempo pero por la burla prefiero ser fan a escondidas </p>
+		  <h1> Actualmente practico este deporte </h1>
+		  <p> y tengo un equipo donde me invitaron a participar en el torneo local del tecncolgico de puebla </p>
+		  <center><img src="../Personal/Mi equipo de fut.jpg" width="500" /></center>
+		  <h1> <b> Mis crikines FC </b></h1>
+		</section>
+</section>
+	<section id="Estudios">
+		<h2>&nbsp; </h2>
+		<h2>&nbsp;</h2>
+		<h2 align="center">Estudios </h2>
+		<p>Aqui son los que eh estado estudiando en lo que llevo de mi vida los cuales son desde</p>
+				<table width="100%" border="0">
+  <tr>
+    <th scope="col">
+	<li> Prescolar </li>
+					<p> Una anecdota que recuerdo fue que empeze a hablar a los 6 años, por lo cual </p>
+					<p> necesite de psicologia infantil por lo cual me adelante un año de preescolar </p>
+					<p> Estudie en un prescolar en el kinder carmen serdan </p>
+					<button type="button" class="btn-outline-light" onclick="window.location.href='https://www.google.com.mx/maps/place/Jardin+de+Ni%C3%B1os+Carmen+Serdan/@19.0808355,-98.2449058,101m/data=!3m1!1e3!4m15!1m8!3m7!1s0x85cfc6947ac79ee5:0x1411c6d5e7f4c82c!2sIgnacio+Romero+Vargas,+Heroica+Puebla+de+Zaragoza,+Pue.!3b1!8m2!3d19.0754163!4d-98.2465935!16s%2Fg%2F11bvtc16zs!3m5!1s0x85cfc69674a15691:0x1629d19ad518bdf1!8m2!3d19.0810697!4d-98.2447022!16s%2Fg%2F1pw3xfngs?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D'">
+        Presiona aquí para ir a la ubicacion   </button>
+	</th>
+    <th scope="col">
+	<center><img src="../Escuelas/kinder.png" width="500" />	</center>
+	</th>
+  </tr>
+  <tr>
+    <td>
+	<center><img src="../Escuelas/primaria.png" width="500" /></center>
+	</td>
+    <td>
+	<center><li> Prmaria </li>
+					<p> Lo bueno de estar en mi colonia es que el preescolar y la primaria estaban cercas asi que se les ocurrio a mis padres </p>
+					<p> inscribirme cerca aparte de que viviamos literal a lado de la escuela pues nos ibamos vien iendo y viniendo </p>
+					<p> sin problame alguno </p>
+					<p> La primaria donde estudie se llama Primaria Benito Juarez </p>
+					<button type="button" class="btn-outline-light" onclick="window.location.href='https://www.google.com.mx/maps/place/Escuela+Primaria+Fed+Lic+Benito+Juarez/@19.0802684,-98.2444348,3a,75y,97.31h,90.92t/data=!3m7!1e1!3m5!1sQiKeZgN8PPud3I_2rQOZgw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DQiKeZgN8PPud3I_2rQOZgw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D113.110115%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192!4m15!1m8!3m7!1s0x85cfc6947ac79ee5:0x1411c6d5e7f4c82c!2sIgnacio+Romero+Vargas,+Heroica+Puebla+de+Zaragoza,+Pue.!3b1!8m2!3d19.0754163!4d-98.2465935!16s%2Fg%2F11bvtc16zs!3m5!1s0x85cfc694f94a5c61:0x65c50a94537e019c!8m2!3d19.0801982!4d-98.2442644!16s%2Fg%2F1td2v77h?coh=205409&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D'">
+        Presiona aquí para ir a la ubicacion    </button></center>
+	</td>
+  </tr>
+  <tr>
+    <td>
+	<center><li> Secundaria </li>
+		<p> Tambien igual que en la primaria pues estaba cerca y pues estudie otros 3 años mas cerca de donde yo vivia </p>
+		<p> Su nombre de la institucion es Escuela Secundaria Tecnica Numero 52.</p>
+		<button type="button" class="btn-outline-light" onclick="window.location.href='https://www.google.com.mx/maps/place/Escuela+Secundaria+T%C3%A9cnica+No.+52/@19.0788941,-98.2492164,167m/data=!3m1!1e3!4m15!1m8!3m7!1s0x85cfc6947ac79ee5:0x1411c6d5e7f4c82c!2sIgnacio+Romero+Vargas,+Heroica+Puebla+de+Zaragoza,+Pue.!3b1!8m2!3d19.0754163!4d-98.2465935!16s%2Fg%2F11bvtc16zs!3m5!1s0x85cfc693f50f5d1f:0xfefebf3164184c85!8m2!3d19.0790127!4d-98.2487184!16s%2Fg%2F11dflvc1t0?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D'">
+        Presiona aquí para ir a la ubicacion    </button></center>
+	</td>
+    <td><center><img src="../Escuelas/Secundaria.png" width="500" /></center></td>
+  </tr>
+  <tr>
+    <td><center><img src="../Escuelas/Bachiller.png" width="500" /><center</td>
+    <td>
+	<center><li> Bachillerato </li>
+	<p> En donde vivo esta Prescolar y primaria cerca eh igual que estas la secundaria y la preparatoria igual estan de cercas lo cual estudie </p>
+	<p> otros 3 años cerca de mi casa en si todos mis estudios estuvieron cerca de mi casa </p>
+	<p> El instituto Se llama Colegio de Bachilleres del estado de pueblo Plantel 20 </p>
+	<button type="button" class="btn-outline-light" onclick="window.location.href='https://www.google.com.mx/maps/place/COBAEP+PLANTEL+20+IGNACIO+ROMERO+VARGAS/@19.0793584,-98.2492177,3a,75y,239.53h,87.65t/data=!3m6!1e1!3m4!1s4l3-qho_kXRTiJBBLjkzJg!2e0!7i16384!8i8192!4m16!1m9!3m8!1s0x85cfc6947ac79ee5:0x1411c6d5e7f4c82c!2sIgnacio+Romero+Vargas,+Heroica+Puebla+de+Zaragoza,+Pue.!3b1!8m2!3d19.0754163!4d-98.2465935!10e5!16s%2Fg%2F11bvtc16zs!3m5!1s0x85cfc693eefa0cdb:0x406b832e4212d456!8m2!3d19.0793499!4d-98.2494507!16s%2Fg%2F1tfr0s76?coh=205409&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D'">
+        Presiona aquí para ir a la ubicacion    </button></center>
+	</td>
+  </tr>
+  <tr>
+    <td>
+	<center><li> Universidad </li>
+	<p> Actualmente estoy estudiando la carrera de Ingenieria de las Tenologias de la Informacion y Comunicacion (TIC's) lo cual voy en 7 semestre </p>
+	<p> y dia a dia me despierto con esa sensacion de aprender y ser mejor </p>
+	<p> Estudio en el Instituto Tecnologico de Puebla (ITP) </p>
+	<button type="button" class="btn-outline-light" onclick="window.location.href='https://www.google.com.mx/maps/place/Instituto+Tecnol%C3%B3gico+de+Puebla/@19.0697151,-98.1705634,3a,86.9y,65.89h,92.04t/data=!3m6!1e1!3m4!1siAq_zl6HBXpV9CDJb8pUcg!2e0!7i16384!8i8192!4m9!3m8!1s0x85cfc1a52226fe83:0x189ca4d259102630!8m2!3d19.0688824!4d-98.1681694!10e5!14m1!1BCgIgARICCAI!16s%2Fm%2F0gfhfbx?coh=205409&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D'">
+        Presiona aquí para ir a la ubicacion    </button></center>
+	</td>
+    <td><center><img src="../Escuelas/universidad.png" width="500" /></center></td>
+  </tr>
+</table>
+
+	</section>
+	<section id="Amigos">
+		<h2>&nbsp; </h2>
+		<h2>&nbsp;</h2>
+		<h2 align="center">Mis amigos de vida </h2>
+		<p>En lo que vamos en nuestras vidas conocemos desde gente buena hasta gente que es mejor tomar las distancias asi que hoy tratare de poner a mis amigos mas importantes para mi en donde si claro como lo digo y reafirmo son parte de mi vida y corazon :3</p>
+			<section id="Universidad">
+				<h2>&nbsp; </h2>
+				<h2>&nbsp;</h2>
+				<h2 align="right">Mis mejores amigos de universidad </h2>
+				<p align="right"> En lo que voy de mi universidad la verdad eh aprendido a concer genete buena pero ellos se pasan de honestos y buenas amistades los cuales son para mi que me marcaran mi vida de universitario </p>
+				<center> <div class="container">
+        <img src="../Personal/Mis amigos de la uni.jpg" alt="Imagen de ejemplo">
+    </div></center>
+			<p><center>Gracias a ellos aprendi que poco es mucho ya que actualmente varios que eh conocido que eh llamado amigo 
+		<p> Pues no resulto dando en fin a algo que al prinicipio no lo aceptaba ya despues los que estan en foto me ayudaron,</p>
+		<p> comprendieron mi situacion y ellos me ayudaron a salir a adelante</p></center>
+		<center><p style="color:#FF0000"> GRACIAS AMIGOS <3 </p></center>
+			</section>
+			<section id="Bachiller">
+				<h2>&nbsp; </h2>
+				<h2>&nbsp;</h2>
+				<h2 align="left">Mis mejores amigos de Bachiller </h2>
+				<p>Para mi y siempre sera mi mejor epoca sera el bachiller se que a final de bachiller me toco la pandemia pero eso no nos importo porque bien se dice que el tiempo y la distancia no son escusas para tener un buen amigo asi que al final del dia lo unico que tengo son ellos igualmente que los de la universidad. </p>
+				<center> <div class="container">
+        <img src="../Personal/Mis amigos del bachiller.jpg" alt="Imagen de ejemplo">
+    </div></center>
+	<p><center> Aqui pasa diferente cuando sali de secundaria para bachiller pase por una crisis de ansiedad y depresion lo cual </p>
+	<p> en mis calificaciones no resultarios beneficiosos </p>
+	<p> pero gracias a estas personitas supe lograr y estar bien conmigo mismo tanto asi que me aydudaron a superar mi depresion </p>
+	<p> pero igual los quiero como mis amigos de la uni </p></center>
+	<p style="color:#FF0000"><center> LOS QUIERO IGUAL AMIGOS <3 </p></center>
+			</section>
+	</section>
+	<section id="Familia">
+		<h2>&nbsp; </h2>
+		<h2>&nbsp;</h2>
+		<h2 align="center">Mi querida Familia </h2>
+		<ol>
+		  <li>
+		    <div align="right">Con ellos naci, con ellos son mis primeros valores y gracias a ellos estoy aprendiendo sobre como es la vida, como me tratara en la vida y sobre todo de como enfrentar y afrontar los golpes de la vida dia a dia</div>
+		  </li>
+</ol>
+		<center> <div class="container">
+        <img src="../Personal/Mi familia.jpg" alt="Imagen de ejemplo">
+    </div></center>
+		<b><center><p align="left" style="color:#FF0000;"> Aqui viene bonito mensaje <3 </p>
+		</center><b>
+		<p align="right"> Aqui le agradeceria a <b> mi madre </b> por tener la paciencia y por tener el amor que ella habria querido y por es estoy agradecido por tener aparte a  <b> dos hermanos </b> en donde gracias a ellos recuerdo lo importante que es mejor tener un poco de compañia en esta vida ya que aunque sea verdadero o no la soledad es el peor enemigo de cada quien </p>
+		<p align="right"> y mas que nada agradecer a <i><b>mi padre</b></i> que gracias a el que me enseño la educacion me esta enseñando actualmente a trabajar a abastecerme por mi mism y sobre todo tener esas ganas de dias a dia leventarme de micama y saber que estoy bien estoy vivo y agradecer a la vida y a adios lo que me a dado y estar asi siempre estar agradecido en la vida y luvhar por lo que mqueremos </p>
+	</section>
+	<section id="Trabajo">
+		<h2>&nbsp; </h2>
+		<h2>&nbsp;</h2>
+		<h2 align="center">Mis oficios y trabajos </h2>
+		<p>Gracias a mi pap&aacute; me esta incluyendo al trabajo desde preparatoria ( o bachiller ) empeze con su oficio el cual actualmente mi pap&aacute; poco ejerce pero gracias a el tengo de oficio</p>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <th scope="col">
+			<center><h1>Albañileria </h1></center>
+			  <center>
+			    <img src="../Trabajo/Michi albañil.jpg" width="421" height="283" />
+			  </center>
+			  <p> Lo que hago en este me preparan mas a la construccion de obra negra (se le llama asi igualmente) en donde aparte de saber medidas y tipos de construccion estoy en plena enseñansa sobre la arquitectura y un poco mas de acabados de alñabileria </p>
+			  <div align="center"><img src="../Trabajo/Albañil.jpg" alt="" width="421" height="283" class="imagen-zoom" /></div>
+			  <p> En este solamente tengo esta imagen de referencia en donde estamos por terminar una cisterna en donde estoy desarrollando el armazon para su colado des u pequeña base o tapa </p>			</th>
+            <th scope="col"><h1>Electricista </h1>
+			<div align="center"><img src="../Trabajo/Electricista.jpg" width="421" height="283" /></div>
+			<p> En este me enseñan a las instalaciones electricas en casa hogares principalmente lo basico como cambiar focos, contactos y apagadores aparte de que me enseñan mas a como hacer las coexiones de habitaciones de casas hogares y asi no tener problemas en un futuro </p>
+			<div align="center"><img src="../Trabajo/Electricidad 3.jpg" width="421" height="283" /></div>
+			<p> Aqui estoy instalando un foto en una habitacion en donde aparte de que tuve corrientes (me dio toques) pues.... </p>
+			<div align="center"><img src="../Trabajo/Electricidad 2.jpg" width="421" height="283" /></div>
+			<p> Se termino con todo un exito </p>			</th>
+          </tr>
+          <tr>
+            <td>
+			<center><h1> Pintura y acabados </h1></center>
+		  <div align="center"><img src="../Trabajo/Pinto.jpg" width="421" height="283" /></div>
+		  <p> Aqui es mas dedicado a la pintura en estructuras de metal o en estructuras de hogares.
+		  <div align="center"><img src="../Trabajo/pintura 4.jpg" width="421" height="283" /></div>
+		  <p> Aqui estoy en un pueblo cercano al volcan popocatepetl que se llama santiago Xalitzintla  a su iglesia aqui mostrare la finalizacion de la propia iglesia </p>
+		  <div align="center"><img src="../Trabajo/pintura 2.jpg" width="421" height="283" /></div>			</td>
+            <td>
+			<center><h1> Plomeria </h1></center>
+			<div align="center"><img src="../Trabajo/Plomero.jpg" width="421" height="283" /></div>
+			<p> Aqui estoy empezando mas que nada pero llevo ejerciendolo como 2 años por lo tanto tengo un poco de experiencia en lo que son conexiones de tuverias de cualquier tipo tanto para instalaciones de baños, coladeras y todo tipo que conlleva a lo practicado mio </p>
+			<p> Aqui no tengo imagenes del trabajo pero si tengo fotos de los lugares que vicite gracias al trabajo de la plomeria en donde es cerca de uno de los lagos de aca en puebla </p>
+			<div align="center"><img src="../Trabajo/Plomeria .jpg" width="421" height="283" /></div>
+			<div align="center"><img src="../Trabajo/Plomeria 3.jpg" width="421" height="283" /></div>			</td>
+          </tr>
+        </table>
+		<p>&nbsp;</p>
+		<div align="center"></div>
+			<div align="center"></div>
+			<div align="center"></div>
+	</section>
+	<center><h2>&nbsp;</h2>
+	  <h2>&nbsp;</h2>
+		  <h2>&nbsp;</h2>
+		  <section id="Horario">
+		  <h2>&nbsp;</h2>
+		  <h2>Mi horario tanto escolar como De trabajo </h2>
+</center>
+			<p>Cada quien debe tener agendas ocupadas o no tener tiempo por lo cual yo eh optado en generar mis porpios horarios lo cuales se basan mas en la escuela y en el trabajo mas que nada</p>
+			<center><h2>&nbsp;</h2>
+			  <h2>Horario Universitario</h2>
+			</center>
+			<table width="100%" border="0">
+  <tr>
+    <th scope="col"><center>
+			<table width="200" border="1" align="center">
+  			<tr>
+			  <th bgcolor="#FFFF00" scope="col"><div align="center">Hora</div></th>
+			  <th bgcolor="#FFFF00" scope="col"><div align="center">Lunes</div></th>
+				<th bgcolor="#FFFF00" scope="col"><div align="center">Martes</div></th>
+				<th bgcolor="#FFFF00" scope="col"><div align="center">Miercoles</div></th>
+				<th bgcolor="#FFFF00" scope="col"><div align="center">Jueves</div></th>
+				<th bgcolor="#FFFF00" scope="col"><div align="center">Viernes</div></th>
+			</tr>
+ 			<tr>
+			  <td bgcolor="#FFCC00"><div align="center">07:00</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			  <td bgcolor="#33FFFF"><div align="center">Base de Datos Distribuidas</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			  <td bgcolor="#33FFFF"><div align="center">Base de Datos Distribuidas</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+ 	 		</tr>
+ 			 <tr>
+			   <td bgcolor="#FFCC00"><div align="center">08:00</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			   <td bgcolor="#33FFFF"><div align="center">Base de Datos Distribuias</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			   <td bgcolor="#33FFFF"><div align="center">Base De Datos Distribuidas</div></td>
+				<td bgcolor="#33FFFF"><div align="center">Base de Datos Distribuidas</div></td>
+  			</tr>
+  			<tr>
+			  <td bgcolor="#FFCC00"><div align="center">09:00</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			  <td bgcolor="#FF9999"><div align="center">Programacion Web</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			  <td bgcolor="#FF9999"><div align="center">Programacion Web</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+  			</tr>
+ 			 <tr>
+			   <td bgcolor="#FFCC00"><div align="center">10:00</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			   <td bgcolor="#FF9999"><div align="center">Programacion Web</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			   <td bgcolor="#FF9999"><div align="center">Programacion Web</div></td>
+				<td bgcolor="#FF9999"><div align="center">Programacion Web</div></td>
+ 			 </tr>
+  			<tr>
+			  <td bgcolor="#FFCC00"><div align="center">11:00</div></td>
+				<td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+				<td bgcolor="#00FF00"><div align="center">Administracion de proyectos</div></td>
+			  <td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+				<td bgcolor="#00FF00"><div align="center">Administracion de proyectos</div></td>
+			  <td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+  			</tr>
+  			<tr>
+			  <td bgcolor="#FFCC00"><div align="center">12:00</div></td>
+				<td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+				<td bgcolor="#00FF00"><div align="center">Administracion de proyectos</div></td>
+			  <td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+				<td bgcolor="#00FF00"><div align="center">Administracion de proyectos</div></td>
+				<td bgcolor="#00FF00"><div align="center">Administracion de proyectos</div></td>
+  			</tr>
+  			<tr>
+			  <td bgcolor="#FFCC00"><div align="center">13:00</div></td>
+				<td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+				<td bgcolor="#FFFFFF"><div align="center">Administracion y seguridad de redes</div></td>
+			  <td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+				<td bgcolor="#FFFFFF"><div align="center">Administracion y seguiridad de redes</div></td>
+			  <td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+  			</tr>
+  			<tr>
+			  <td bgcolor="#FFCC00"><div align="center">14:00</div></td>
+				<td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+				<td bgcolor="#FFFFFF"><div align="center">Administracion y seguridad de redes</div></td>
+			  <td bgcolor="#FF0000"><div align="center">Servicio Social</div></td>
+				<td bgcolor="#FFFFFF"><div align="center">Administracion y seguridad de redes</div></td>
+				<td><div align="center">Administracion y seguridad de redes </div></td>
+  			</tr>
+  			<tr>
+			  <td bgcolor="#FFCC00"><div align="center">15:00</div></td>
+				<td bgcolor="#999999"><div align="center">Sistemas Operativos I</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			  <td bgcolor="#999999"><div align="center">Sistemas Operativos I</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			  <td bgcolor="#000000"><div align="center"></div></td>
+  			</tr>
+  			<tr>
+			  <td bgcolor="#FFCC00"><div align="center">16:00</div></td>
+				<td bgcolor="#999999"><div align="center">Sistemas Operativos I</div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			  <td bgcolor="#999999"><div align="center">Sistemas Operativos I
+			  </div></td>
+				<td bgcolor="#000000"><div align="center"></div></td>
+			  <td bgcolor="#000000"><div align="center"></div></td>
+  			</tr>
+</table>
+</center>
+	</th>
+    <th scope="col"> <p> En este lo que es que me tomo 1 hora de camino de casa, Osea que si tengo clase a las 11 tengo que salir de mi casa antes de las 10 para llegar a tiempo. </p>
+	<p> Lo que tambien me cuesta es el horario de martes y jueves ya que son los dias que tengo clase casi a las 5 de la tarde para no llegar tarde a mi clase de las 7 de la mañana </p>
+	</th>
+  </tr>
+</table>
+	<li>Horario de trabajo</li>
+	<p>Mis horarios de trabajo son de que cuando estoy de vacaciones es de lunes a sabado de 09:00 a 20:00 hrs<br /></p>
+	<p>Pero como estoy estudiando o siguiendo estudiando estoy de lunes a viernes de 18:00 a 20:00 y sabado de 09:00 a 20:00</p> 
+	<center>
+	<section id="Comentarios">
+		 <h2 class="estilo1">Comentarios</h2>
+    <form action="enviar_comentario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required/><br/>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required/><br/>
+        <label for="comentario">Comentario:</label><br/>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br/>
+        <input type="submit" value="Enviar comentario" style="padding: 10px 20px; background-color: #000; color: #fff; border: none; cursor: pointer;"/
+    </form>
+	</section>
+	<center><img src="../Gracias.gif" /></center>
+</body>
+
+</html>
